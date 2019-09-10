@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hiviniquintero.java.controllers.MainController">
    <children>
-      <TextField fx:id="formula" layoutX="33.0" layoutY="33.0" promptText="Enter formula" />
-      <Button fx:id="doButton" onAction="#handleButtonPressed" layoutX="204.0" layoutY="33.0" mnemonicParsing="false" text="Do" />
+      <TextField fx:id="formula" layoutX="32.0" layoutY="33.0" promptText="E.g. x^2 -3x" />
+      <Button fx:id="doButton" layoutX="31.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleButtonPressed" text="Find Roots" />
+      <Text layoutX="32.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Formula (Separated by spaces)" />
+      <TextField fx:id="variableR" layoutX="32.0" layoutY="84.0" promptText="r" />
+      <TextField fx:id="variableS" layoutX="31.0" layoutY="132.0" promptText="s" />
+      <TextField fx:id="variableDeltaR" layoutX="31.0" layoutY="181.0" promptText="deltaR" />
+      <TextField fx:id="variableDeltaS" layoutX="31.0" layoutY="232.0" promptText="deltaS" />
+      <TextField fx:id="maxIter" layoutX="31.0" layoutY="281.0" promptText="Max Iterations Number" />
+      <ListView fx:id="roots" layoutX="233.0" layoutY="71.0" prefHeight="109.0" prefWidth="308.0" />
+      <Text layoutX="32.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Variable R" />
+      <Text layoutX="32.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Variable S" />
+      <Text layoutX="233.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Roots" />
+      <Text layoutX="233.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complex Roots" />
+      <ListView fx:id="complexRoots" layoutX="233.0" layoutY="219.0" prefHeight="109.0" prefWidth="308.0" />
+      <Text layoutX="32.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valid Error on R" />
+      <Text layoutX="32.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valid Error on S" />
+      <Text layoutX="32.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maximum number of iterations" />
    </children>
 </AnchorPane>

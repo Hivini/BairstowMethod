@@ -10,13 +10,13 @@ public class Utils {
      * @param polynomial The one variable and correctly written polynomial expression. E.g. x^2-x^1+2
      * @return A map that has as key the exponents and the values coefficients.
      */
-    public static HashMap<Integer, Integer> formatPolynomial(String polynomial) {
+    public static HashMap<Integer, Float> formatPolynomial(String polynomial) {
         String[] elements = polynomial.split(" ");
-        HashMap<Integer, Integer> expressions = new HashMap<>();
+        HashMap<Integer, Float> expressions = new HashMap<>();
         for (String element : elements) {
             System.out.println(element);
             int[] processedElement = processElement(element);
-            expressions.put(processedElement[1], processedElement[0]);
+            expressions.put(processedElement[1], (float)processedElement[0]);
         }
         return expressions;
     }
